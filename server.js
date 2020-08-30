@@ -7,9 +7,11 @@ client.load({
     application: "client-config"
 }).then((config) => {
     const port = config.get("server.port");
+    const server = config.get("server.port");
 
 
     app.listen(port, () => {
         console.log(`Server running on port ${port}`)
+        console.log(server);
     })
 });
